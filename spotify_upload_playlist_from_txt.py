@@ -35,15 +35,16 @@ REDIRECT_URI = "http://127.0.0.1:8888/callback"
 
 SCOPE = (
     "playlist-read-private "
+    "playlist-read-public "
     "playlist-modify-private "
     "playlist-modify-public"
 )
-
 
 SEARCH_DELAY_SECONDS = 0.25
 ADD_BATCH_SIZE = 100
 REMOVE_BATCH_SIZE = 100
 DEBUG = False
+
 
 # =========================
 # AUTH
@@ -168,6 +169,7 @@ def score_candidate(entry: dict, track: dict) -> int:
         score += 10
 
     return score
+
 
 # =========================
 # PARSING
